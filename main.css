@@ -87,7 +87,7 @@ a:focus-visible {
   color: var(--white);
 }
 
-/* On phones the logo sits above the menu. The links can wrap if needed */
+/* On phones the logo sits above the menu the links can wrap if needed */
 .header-layout {
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@ nav a:hover, nav a:focus-visible {
   margin-top: .75rem;
 }
 
-/* The small label above each heading matches the mockup. */
+/* The small label above each heading matches the mockup */
 .eyebrow {
   margin-bottom: .6rem;
   color: var(--brown);
@@ -372,3 +372,5 @@ figcaption .eyebrow { margin: .55rem 0 0; }
   .offer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .offer-grid article:last-child { grid-column: auto; }
 }
+/* I have learned a lot in the module but since what happened last time I have been stressing over every detail of my work whenever I  got struck on the CSS Itried different solutions on my own without using AI to solve the problem .
+I went back through all the feedback you gave me on my previous work and used it to improve the areas you pointed out Im still unsure about a few details but Idid mybest to apply your fedback and follow the instructions */
