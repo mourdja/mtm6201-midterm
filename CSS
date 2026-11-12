@@ -317,6 +317,58 @@ figcaption .eyebrow { margin: .55rem 0 0; }
 }
 
 /* I turn off button animations for visitors who prefer less motion. */
+
 @media (prefers-reduced-motion: reduce) {
   .button { transition: none; }
+}
+
+/* At 768px, the headings get bigger and the gallery uses four columns. The first photo covers two rows and two columns. */
+@media (min-width: 768px) {
+  h1 { font-size: 2.986rem; }
+  h2 { font-size: 2.488rem; }
+  h3 { font-size: 1.728rem; }
+
+  .wrapper { width: calc(100% - 4rem); }
+
+  .gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .gallery-feature { grid-row: span 2; height: 100%; }
+
+  .offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.25rem;
+  }
+
+  .offer-grid article:last-child { grid-column: span 2; }
+
+  .promotion-grid, .about {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .testimonial-grid figure { min-height: 20rem; }
+}
+
+/* At 1100px, the logo and menu sit side by side, and all three offers fit in one row. */
+@media (min-width: 1100px) {
+  h1 { font-size: 3.815rem; }
+  h2 { font-size: 3.052rem; }
+  h3 { font-size: 1.953rem; }
+
+  .header-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: .75rem;
+  }
+
+  .hero { min-height: clamp(34rem, 46vw, 50rem); }
+
+  .offer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .offer-grid article:last-child { grid-column: auto; }
 }
