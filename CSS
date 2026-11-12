@@ -121,3 +121,75 @@ nav a {
 nav a:hover, nav a:focus-visible {
   color: var(--gold);
 }
+/* Both sections have centered text over a photo that fills the space. */
+.hero, .promotions {
+  background-color: var(--black);
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
+  text-align: center;
+}
+
+/* I darken the banner photo so the white text is easier to read. */
+.hero {
+  display: grid;
+  align-items: center;
+  min-height: 30rem;
+  padding-block: 4rem;
+  background-image: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url("../images/hero-background.jpg");
+}
+
+.hero h1, .hero p {
+  max-width: 39rem;
+  margin-inline: auto;
+}
+
+.hero p, .about p + p {
+  margin-top: .75rem;
+}
+
+/* The small label above each heading matches the mockup. */
+.eyebrow {
+  margin-bottom: .6rem;
+  color: var(--brown);
+  text-transform: uppercase;
+}
+
+.promotions .eyebrow, .testimonials .eyebrow {
+  color: var(--gold);
+}
+
+/* The buttons share the same padding and text style  Each type has its own colors */
+.button {
+  display: inline-block;
+  margin-top: clamp(1.5rem, 3vw, 3rem);
+  padding: .75rem clamp(1.25rem, 2.5vw, 2.5rem);
+  border: 2px solid transparent;
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.button-light {
+  background: var(--white);
+  color: var(--black);
+}
+
+.button-dark { background: var(--black); }
+.button-outline { border-color: var(--white); }
+
+/* Buttons turn gold on hover or keyboard focus  and brown when pressed */
+.button:hover, .button:focus-visible {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--black);
+}
+
+.button:active {
+  border-color: var(--brown);
+  background: var(--brown);
+  color: var(--black);
+}
