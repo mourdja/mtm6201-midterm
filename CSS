@@ -272,3 +272,51 @@ nav a:hover, nav a:focus-visible {
   aspect-ratio: 5 / 6;
   object-fit: cover;
 }
+.testimonial-grid {
+  margin-top: clamp(1.5rem, 2.2vw, 2.5rem);
+}
+
+/* The text sits at the bottom of each photo, where the background is darkest. */
+.testimonial-grid figure {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: 22rem;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+ /* make the photo fill the card without stretching it */
+
+.testimonial-grid img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* add a dark gradient over the photo so the text is easier to read  */
+
+.testimonial-grid figure::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .8));
+  content: "";
+}
+
+figcaption { padding: 1.25rem; }
+figcaption .eyebrow { margin: .55rem 0 0; }
+
+/* The copyright line is centered on a black background. */
+.site-footer {
+  padding-block: var(--space) 2rem;
+  text-align: center;
+}
+
+/* I turn off button animations for visitors who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+}
