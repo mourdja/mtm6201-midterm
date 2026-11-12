@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coffee House</title>
+      <!-- The Google Fonts link loads Lato and Karla. My own stylesheet is in the css folder. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&amp;family=Lato:wght@400;700;900&amp;display=swap">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- I put the skip link first so keyboard users can go straight to the main content. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- The header groups the logo and the navigation. The links use section IDs to jump down the page. -->
+  <header class="site-header" id="top">
+    <div class="wrapper header-layout">
+      <a href="#top">
+        <img class="logo" src="images/my-coffee-shop-logo.svg" alt="My Coffee House">
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#locations">Locations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <! -- The main element holds the landing page tabindex="-1" lets the skip link move focus here -- >
+  <main id="main" tabindex="-1">
+    <!-- The hero contains the only h1, the introduction and a link to the menu section. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrapper hero-content">
+        <h1 id="hero-title">Experience coffee like never before</h1>
+        <p>We craft more than beverages; we curate memories, one flavorful moment at a time. Embrace the aroma and let every visit be a chapter in your coffee story.</p>
+        <a class="button button-light" href="#menu">Explore our menu</a>
+      </div>
+    </section>
+
+    <!-- The gallery uses the original file names. Each alt text describes what is in the photo. -->
+    <section class="wrapper gallery-section" aria-labelledby="gallery-title">
+      <p class="eyebrow">Welcome to My Coffee House</p>
+      <h2 id="gallery-title">Experience a new way to taste coffee</h2>
+
+      <!-- The first photo spans extra grid cells at larger breakpoints. -->
+      <div class="gallery">
+        <img class="gallery-feature" src="images/latte.jpeg" alt="Milk being poured into a latte">
+        <img src="images/coffee-beans.jpeg" alt="A cup filled with roasted coffee beans">
+        <img src="images/pouring-coffee.jpeg" alt="Fresh coffee pouring into a glass carafe">
+        <img src="images/three-cups.jpeg" alt="Three cups of coffee viewed from above">
+        <img src="images/smiling-employee.jpeg" alt="A smiling barista at the espresso machine">
+      </div>
+    </section>
+
+    <!-- Each reason to visit has its own h3 and paragraph so the three offers are easy to scan -->
+    <section class="wrapper offers" aria-labelledby="offers-title">
+      <p class="eyebrow">What we Offer</p>
+      <h2 id="offers-title">Why visit us?</h2>
+
+      <!-- The headings describe the offer icons, so the icons use empty alt text  -->
+      <div class="offer-grid">
+        <article>
+          <img src="images/fair-trade.svg" alt="">
+          <h3>Fair Trade Coffee</h3>
+          <p>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</p>
+        </article>
+        <article>
+          <img src="images/local-baked-goods.svg" alt="">
+          <h3>Local baked goods</h3>
+          <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community.</p>
+        </article>
+        <article>
+          <img src="images/made-with-love.svg" alt="">
+          <h3>Made with love</h3>
+          <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
+        </article>
+      </div>
+    </section>
