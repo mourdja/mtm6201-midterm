@@ -193,3 +193,29 @@ nav a:hover, nav a:focus-visible {
   background: var(--brown);
   color: var(--black);
 }
+.gallery-section, .offers, .about, .testimonials {
+  padding-top: var(--space);
+}
+
+.gallery-section h2, .testimonials h2 {
+  max-width: 38rem;
+}
+
+.gallery, .offer-grid, .promotion-grid, .about, .testimonial-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* On phones, the gallery has two columns. The first photo fills the top row. */
+.gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: clamp(1rem, 1.8vw, 2rem);
+  gap: clamp(.75rem, 1.2vw, 1.25rem);
+}
+
+/* I crop the photos into squares so they line up and keep their shape. */
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
