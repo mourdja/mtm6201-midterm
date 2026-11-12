@@ -206,16 +206,69 @@ nav a:hover, nav a:focus-visible {
   gap: 1.25rem;
 }
 
-/* On phones, the gallery has two columns. The first photo fills the top row. */
+/* On phones, the gallery has two columns the first photo fills the top row */
 .gallery {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: clamp(1rem, 1.8vw, 2rem);
   gap: clamp(.75rem, 1.2vw, 1.25rem);
 }
 
-/* I crop the photos into squares so they line up and keep their shape. */
+/* I crop the photos into squares so they line up and keep their shape */
 .gallery img {
   width: 100%;
   aspect-ratio: 1;
+  object-fit: cover;
+}
+.gallery-feature { grid-column: span 2; }
+
+.offers {
+  padding-bottom: var(--space);
+  text-align: center;
+}
+
+/* The offers stack on phones i use the same size for all three icons */
+.offer-grid {
+  margin-top: 2.5rem;
+  gap: 2.75rem;
+}
+
+.offer-grid article { max-width: 23rem; margin-inline: auto; }
+
+/*give all three icons the same square space and keep each one fully visible*/
+
+.offer-grid img {
+  width: clamp(6.5rem, 10vw, 10rem);
+  height: clamp(6.5rem, 10vw, 10rem);
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.offer-grid p, .about h2 + p {
+  margin-top: .5rem;
+}
+
+/* I darken the shop photo so the text over it is easier to read */
+.promotions {
+  padding-block: var(--space);
+  background-image: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url("../images/coffee-shop.jpeg");
+}
+
+.promotion-grid {
+  gap: 3rem;
+}
+
+.promotion-grid h2 {
+  max-width: 33rem;
+  margin-inline: auto;
+}
+
+.about {
+  padding-bottom: var(--space);
+}
+
+/* The story photo has a tall crop like the one in the mockup */
+.about img {
+  width: 100%;
+  aspect-ratio: 5 / 6;
   object-fit: cover;
 }
